@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy Game</title>
+    <link rel="stylesheet" href="yatzistyle.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="game-container">
+            <h1>Yatzy Game</h1>
+            
+            <div class="dice-section">
+                <h2>Dice</h2>
+                <div class="dice-grid">
+                    <div class="dice" id="dice-0">0</div>
+                    <div class="dice" id="dice-1">0</div>
+                    <div class="dice" id="dice-2">0</div>
+                    <div class="dice" id="dice-3">0</div>
+                    <div class="dice" id="dice-4">0</div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <h2>Controls</h2>
+                <div class="hold-buttons">
+                    <button class="hold-btn" id="hold-0">Hold 1</button>
+                    <button class="hold-btn" id="hold-1">Hold 2</button>
+                    <button class="hold-btn" id="hold-2">Hold 3</button>
+                    <button class="hold-btn" id="hold-3">Hold 4</button>
+                    <button class="hold-btn" id="hold-4">Hold 5</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="roll-button">Roll Dice</button>
+                    <button class="btn btn-secondary" id="reset-button">New Game</button>
+                </div>
+
+                <div class="game-info">
+                    <p id="throw-count">Throws: 0 / 3</p>
+                </div>
+            </div>
+
+            <div class="scoring-section">
+                <h2>Scoring Categories</h2>
+                <div class="scoring-grid">
+                    <button class="score-btn" id="score-ones">Ones</button>
+                    <button class="score-btn" id="score-twos">Twos</button>
+                    <button class="score-btn" id="score-threes">Threes</button>
+                    <button class="score-btn" id="score-fours">Fours</button>
+                    <button class="score-btn" id="score-fives">Fives</button>
+                    <button class="score-btn" id="score-sixes">Sixes</button>
+                    <button class="score-btn" id="score-pair">Pair</button>
+                    <button class="score-btn" id="score-twoPairs">Two Pairs</button>
+                    <button class="score-btn" id="score-threeOfAKind">3 of a Kind</button>
+                    <button class="score-btn" id="score-fourOfAKind">4 of a Kind</button>
+                    <button class="score-btn" id="score-fullHouse">Full House</button>
+                    <button class="score-btn" id="score-smallStraight">Small Straight</button>
+                    <button class="score-btn" id="score-largeStraight">Large Straight</button>
+                    <button class="score-btn" id="score-chance">Chance</button>
+                    <button class="score-btn" id="score-yatzy">Yatzy</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-container">
+            <h2>Game History</h2>
+            <div class="history-score">
+                <h3 id="total-score">Total Score: 0</h3>
+            </div>
+            <div class="history-list" id="history-list">
+                <p class="history-empty">No games played yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="yatzigamemanager.js"></script>
+</body>
+</html>
