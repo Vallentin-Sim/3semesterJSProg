@@ -42,6 +42,7 @@ function binarySearch(array, searchedElement) {
         console.log("Element not found")
     }
 }
+
 binarySearch(list1, 8)
 binarySearch(list2, 10)
 
