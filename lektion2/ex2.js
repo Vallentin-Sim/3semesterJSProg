@@ -7,10 +7,10 @@ let list2 = [4, 6, 3, 9, 2, 1, 5, 8, 7]
 
 function bubbleSort(array) {
     function swap(arr, index1, index2) {
-                let temp = arr[index1];
-                arr[index1] = arr[index2];
-                arr[index2] = temp;
-            }
+        let temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    }
     for (let i = array.length - 1; i >= 0; i--) {
         for (let j = 0; j <= i - 1; j++) {
             if (array[j] > array[j + 1]) {
