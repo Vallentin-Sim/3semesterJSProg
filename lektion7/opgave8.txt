@@ -1,0 +1,37 @@
+Opgave8.1
+Lav et array med en række person objekter: Attributer; Hver person skal have et navn, en alder, et mobilnummer.
+
+Løs nedenstående vha. arrays højere ordens metoder.
+
+Find en person med et bestemt mobilnummer
+
+Find den mindste alder 
+
+Modificer arrayet med personer, så personerne nu får et løbende ID.
+
+Generer en tekststreng, der indeholder personernes navne – kommasepareret og i sorteret rækkefølge.
+
+Generer et array med navn og mobilnummer på de personer, der er yngre end 30
+
+Opgave 8.2
+
+Definer en compareSort funktion, der tager en compare funktion som parameter og
+returnerer en sort funktion, der bruger denne compare funktion til at sortere et array af strenge.
+
+Brug compareSort funktionen til at generere en lenSort og en ignoreCaseSort funktion, der
+bruger compareLen hhv. compareIgnoreCase fra opgave 2.3.
+
+Opgave 8.3
+Modificer compareSort funktionen, så den returnerede sort funktion nu validerer sin parameter
+
+Opgave 8.4
+Implementer et Observer pattern på følgende måde:
+
+• Observers implementeres som funktioner, der kaldes, når de ”notifies”.
+
+• Et Subject defineres som en subject funktion, der har et array med observers som lokal variabel
+
+• Funktionen subject skal desuden definere funktionerne registerObserver og notifyObservers som indre funktioner 
+og returnere dem som metoder i et object.
+
+Afprøv implementationen med et par observers.
