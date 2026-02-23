@@ -20,6 +20,13 @@ const addUniqueIdToPersons = persons.map((person, index) => ({...person, id: ind
 console.log(addUniqueIdToPersons);
 
 // Opgave 8.2
+function compareSort(array){
+    return function(array, compare) {
+        return array.sort(compare);
+    };
+}
+
+
 function compare(a, b) {
     if (a < b) {
         return -1;
@@ -30,23 +37,33 @@ function compare(a, b) {
     }
 }
 
-function compareSortAge(compare){
-    const sortedPersons = [...persons].sort((a, b) => compare(a.age, b.age));
+function ifUndefinedOrMissingValues(){
+    if (compare.a === undefined || compare.b === undefined) {
+        throw new Error("Undefined values are not allowed for comparison.");
+    } else if (compare.a === null || compare.b === null) {
+        throw new Error("Null values are not allowed for comparison.");
+    } else if (typeof compare.a !== typeof compare.b) {
+        throw new Error("Values of different types cannot be compared.");
+    } 
+}
+
+function compareSortAge(compare = ifUndefinedOrMissingValues){
+    const sortedPersons = persons.sort((a, b) => compare(a.age, b.age));
     return sortedPersons;
 }
 
-function compareSortName(compare){
-    const sortedPersons = [...persons].sort((a, b) => compare(a.name, b.name));
+function compareSortName(compare = ifUndefinedOrMissingValues){
+    const sortedPersons = persons.sort((a, b) => compare(a.name, b.name));
     return sortedPersons;
 }
 
-function compareLength(compare){
-    const sortedPersons = [...persons].sort((a, b) => compare(a.name.length, b.name.length));
+function compareLength(compare = ifUndefinedOrMissingValues){
+    const sortedPersons = persons.sort((a, b) => compare(a.name.length, b.name.length));
     return sortedPersons;
 }
 
-function ignoreCaseSort(compare){
-    const sortedPersons = [...persons].sort((a, b) => compare(a.name.toLowerCase(), b.name.toLowerCase()));
+function compareIgnoreCaseSort(compare = ifUndefinedOrMissingValues){
+    const sortedPersons = persons.sort((a, b) => compare(a.name.toLowerCase(), b.name.toLowerCase()));
     return sortedPersons;
 }
 
@@ -59,6 +76,7 @@ console.log(compareSortName(compare));
 console.log("Sorted by name length:");
 console.log(compareLength(compare));
 console.log("Sorted by name (ignore case):");
-console.log(ignoreCaseSort(compare));
+console.log(compareIgnoreCaseSort(compare));
 
 // Opgave 8.3
+
