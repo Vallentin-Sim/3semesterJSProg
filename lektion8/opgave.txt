@@ -1,0 +1,22 @@
+Opgave 1.
+
+Tag udgangspunkt i specialisering.js og tilføj equals() metoder samt en compare() metode.
+ Metoden equals(p) på Person skal sikre, at p har Person som constructor og har samme navn som
+personen.
+Metoden equals(s) på Studerende skal sikre, at s har Studerende som constructor og har samme
+navn og id som den studerende.
+Den static compare(p1, p2) skal sammenligne p1 og p2 baseret på navn.
+ Lav dernæst et array med nogle personer og studerende og sorter dem på navn. Indsæt desuden
+et par katte (se polymorfi.js) og sorter på ny.
+
+Opgave 2. 
+
+Lav en class StringStack med tilhørende push() og pop() metoder. 
+
+Opgave 3. 
+
+Anvendes der polymorfi i Observer pattern – jf. Opgave 9.4?
+
+Opgave 4. 
+
+Implementer en dobbeltrettet associering mellem Person og en class Gruppe, som i PRO1.
