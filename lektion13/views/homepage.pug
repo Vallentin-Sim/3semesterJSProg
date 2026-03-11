@@ -10,8 +10,8 @@ body
 
     ul
         each car in cars
-            a(href=`/cars/car?brand=${car.brand}&model=${car.model}`)
                 li #{car.brand} #{car.model}
+                    a(href='/cars/' + car.id) #{car.brand} #{car.model}
             
             
     a(href="/cars") View cars

@@ -1,36 +1,31 @@
 import express from 'express';
+import { Car } from './model/car.js';
 
 const app = express();
-const cars = [
-  { brand: 'Toyota', model: 'Corolla' },
-  { brand: 'Honda', model: 'Civic' },
-  { brand: 'Ford', model: 'Mustang' },
-];
+let cars = [];
+
+
 
 app.use(express.static('assets'));
 
 app.set('view engine', 'pug');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
   res.render('homepage', { cars });
 });
 
-app.get('/cars', (req, res) => {
-  res.render('cars', { cars });
-});
-
-app.get('/cars/car', (req, res) => {
-  const { brand, model } = req.query;
-  const car = { brand, model };
-  res.render('car', { car });
-});
+app.get('/cars/:id', (request, response)=>{
+    const id = parseInt(request.params.id)
+    const car = cars.find(car=>car.id === id)
+    response.render('cars', {car})
+})
 
 app.post('/cars', (req, res) => {
   const { brand, model } = req.body;
-  const car = { brand, model };
+  const car = new Car(brand, model);
   cars.push(car);
   console.log(`Received new car: ${car.brand} ${car.model}`);
   res.redirect('/');

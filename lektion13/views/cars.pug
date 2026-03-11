@@ -1,8 +1,13 @@
-head
-    title Cars
-body
-    h1 Cars
-    ul
-        each car in cars
-            li #{car.brand} #{car.model}
-    a(href='/') Back to homepage
+html 
+    head 
+        title Detaljeside
+        link(rel="stylesheet", href="/style.css")
+    body 
+        h1 Bilinfo
+        p: a(href='/') tilbage til liste
+        #carsform
+            p Mærke: 
+                strong= car.brand
+            p Model:
+                strong= car.model
+        a(href='/') Back to homepage
