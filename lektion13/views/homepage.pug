@@ -1,0 +1,17 @@
+head 
+    title Homepage
+    link(href="/css/styles.css" rel="stylesheet")
+body 
+    div(name="carsinputfelt")
+        form(action= "/cars", method= "post")
+            input(type= "text", name= "brand", id= "brand") 
+            input(type="text",name= "model", id= "model")
+            button(type= "submit") Submit cars
+
+    ul
+        each car in cars
+            a(href=`/cars/car?brand=${car.brand}&model=${car.model}`)
+                li #{car.brand} #{car.model}
+            
+            
+    a(href="/cars") View cars

@@ -1,0 +1,13 @@
+div{
+    border-color: aqua;
+    background-color: lightblue;
+    font-size: 16px;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+input, button{
+    margin: 10px;
+    border-color: azure;
+    align-items: center;
+}

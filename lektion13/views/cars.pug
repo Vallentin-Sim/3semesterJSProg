@@ -1,0 +1,8 @@
+head
+    title Cars
+body
+    h1 Cars
+    ul
+        each car in cars
+            li #{car.brand} #{car.model}
+    a(href='/') Back to homepage
