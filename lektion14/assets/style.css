@@ -1,0 +1,12 @@
+#carsform, #loginform {
+    padding: 3em;
+    background-color: bisque;
+    height: 100px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+input, button {
+    display: block;
+    margin-top: 0.5em;
+}
