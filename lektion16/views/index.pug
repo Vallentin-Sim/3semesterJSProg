@@ -1,0 +1,19 @@
+html 
+    head 
+        title Liste af biler 
+        link(rel="stylesheet", href="/style.css")
+    body 
+        h1 Liste af biler 
+            if (isItAValidUser)
+                a(href='/logout') log ud
+                a(href='/users') liste af brugere
+        if (isItAValidUser)
+            include snippets/addcarform.pug
+            include snippets/adduserform.pug
+        else 
+            include snippets/loginform.pug 
+        #biler
+            ul
+                each car in cars 
+                    li 
+                        a(href='/cars/' + car.id) #{car.brand} #{car.model}

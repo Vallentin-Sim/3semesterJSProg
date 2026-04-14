@@ -1,0 +1,11 @@
+html 
+    head 
+        title Liste af users 
+        link(rel="stylesheet", href="/style.css")
+        script(src="/functions.js" defer) 
+    body 
+        h1 Liste af users 
+        #userlist
+            each user in users 
+                p(data-userid=user.id)= user.username 
+            include snippets/adduserform.pug
